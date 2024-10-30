@@ -47,25 +47,13 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         TextField(
                           controller: emailController,
-                          style: MyTypography.body,
+                          style: MyTypography.bodyMedium,
                           decoration: InputDecoration(
                             label: Text(
                               'Email',
-                              style: MyTypography.body,
+                              style: MyTypography.bodyMedium,
                             ),
                             hintText: 'Silahkan tulis email',
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: const BorderSide(
-                                color: Palette.grey,
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: const BorderSide(
-                                color: Palette.grey,
-                              ),
-                            ),
                           ),
                         ),
                         const SizedBox(
@@ -75,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                           valueListenable: obsecure,
                           builder: (context, _, __) => TextField(
                             controller: passwordController,
-                            style: MyTypography.body,
+                            style: MyTypography.bodyMedium,
                             obscureText: obsecure.value,
                             decoration: InputDecoration(
                               suffixIcon: IconButton(
@@ -90,19 +78,9 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               label: Text(
                                 'Password',
-                                style: MyTypography.body,
+                                style: MyTypography.bodyMedium,
                               ),
                               hintText: 'Silahkan tulis password',
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(
-                                  color: Palette.grey,
-                                )),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(
-                                  color: Palette.grey,
-                                )),
                             ),
                           ),
                         ),
@@ -112,9 +90,8 @@ class _LoginPageState extends State<LoginPage> {
                             onPressed: () {}, 
                             child: Text(
                               'Forgot password ?',
-                              style: MyTypography.title.copyWith(
-                                color: Palette.primary,
-                              ),
+                              style: MyTypography.bodyMedium
+                                .copyWith(color: Palette.primary,),
                             ),
                           ),
                         ),
@@ -136,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                           onPressed: () {}, 
                           child: Text(
                             'Login',
-                            style: MyTypography.title.copyWith(
+                            style: MyTypography.bodyLarge.copyWith(
                               color: Palette.primary,
                             ),
                           ),
@@ -149,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                           children: [
                             Text(
                               'Belum Punya Akun ?',
-                              style: MyTypography.title.copyWith(),
+                              style: MyTypography.bodyMedium.copyWith(),
                             ),
                             const SizedBox(
                               width: 10,
@@ -158,9 +135,8 @@ class _LoginPageState extends State<LoginPage> {
                               onTap: () {},
                               child: Text(
                                 'Daftar Sekarang',
-                                style: MyTypography.title.copyWith(
-                                  color: Palette.primary,
-                                ),
+                                style: MyTypography.bodyMedium
+                                  .copyWith(color: Palette.primary,),
                               ),
                             ),
                           ],
